@@ -1,65 +1,126 @@
-import React from 'react';
+import { View, Text, ScrollView } from 'utopia-api';
 
-const App: React.FC = () => {
-  return (
-    <div>
-      {/* Navigation Bar */}
-      <nav style={styles.navbar}>
-        <a href="#home" style={styles.navItem}>Home</a>
-        <a href="#info" style={styles.navItem}>Info</a>
-        <a href="#features" style={styles.navItem}>Features</a>
-        <a href="#contact" style={styles.navItem}>Contact</a>
-      </nav>
+export const EnhancedContentPage = () => (
+  <View
+    style={{
+      flex: 1,
+      paddingTop: 40, // Adjust this value to control the space from the top
+      backgroundColor: '#f4f4f4',
+    }}
+  >
+    {/* Navigation Bar */}
+    <View
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        padding: 10,
+        backgroundColor: '#fff',
+        borderBottomWidth: 1,
+        borderBottomColor: '#ddd',
+      }}
+    >
+      <Text style={{ fontSize: 18, color: '#007bff' }}>Home</Text>
+      <Text style={{ fontSize: 18, color: '#007bff' }}>Info</Text>
+      <Text style={{ fontSize: 18, color: '#007bff' }}>Services</Text>
+      <Text style={{ fontSize: 18, color: '#007bff' }}>Contact</Text>
+    </View>
 
-      {/* Home Section */}
-      <section id="home" style={styles.section}>
-        <h1>Welcome to Utopia App</h1>
-        <p>Your journey to a better digital experience starts here.</p>
-      </section>
-
-      {/* Info Section */}
-      <section id="info" style={styles.section}>
-        <h2>About Utopia</h2>
-        <p>Utopia is designed to simplify your digital life.</p>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" style={styles.section}>
-        <h2>Features</h2>
-        <ul>
-          <li>Seamless Integration</li>
-          <li>Real-time Collaboration</li>
-          <li>Enhanced Security</li>
-        </ul>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" style={styles.section}>
-        <h2>Contact Us</h2>
-        <p>Reach out to us at <a href="mailto:contact@utopiaapp.com">contact@utopiaapp.com</a>.</p>
-      </section>
-    </div>
-  );
-};
-
-const styles = {
-  navbar: {
-    backgroundColor: '#333',
-    padding: '10px',
-    textAlign: 'center' as 'center',
-  },
-  navItem: {
-    color: '#fff',
-    margin: '0 15px',
-    textDecoration: 'none',
-    fontSize: '18px',
-  },
-  section: {
-    padding: '20px',
-    margin: '20px 0',
-    backgroundColor: '#f4f4f4',
-    borderRadius: '8px',
-  },
-};
-
-export default App;
+    {/* Main Content */}
+    <ScrollView
+      style={{
+        flex: 1,
+        margin: 20,
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        padding: 15,
+        borderWidth: 1,
+        borderColor: '#ddd',
+      }}
+    >
+      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 10 }}>
+        DARPA GRANT PROPOSAL
+      </Text>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10 }}>
+        Project EXOTYPE
+      </Text>
+      <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 10 }}>
+        Adaptive Bio-Structural Augmentation via Exosome-Mediated Recursive Enhancement
+      </Text>
+      <Text style={{ fontSize: 16, marginBottom: 10 }}>
+        <Text style={{ fontWeight: 'bold' }}>I. Ontological Foundation — The DeuxOS Paradigm</Text>
+        {'\n\n'}
+        Modern biology operates on descriptive systems: sequencing, categorizing, and simulating. But the world isn't symbolic. It's structural. We propose an upgrade: the application of the DeuxOS framework — a closed, polarity-typed, recursively evolving operating system for reality itself — to the bioengineering of warfighters.
+        {'\n\n'}
+        The Three Axioms of DeuxOS:
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Duality</Text>: All structure emerges from contrast. Each object inherits a polarity: GodPlus (structure) or GodMinus (anti-structure).
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Descent</Text>: All structure is recursively constructed. Every object is the child of another and inherits its polarity, lineage, and interpretive function.
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Desire</Text>: The only valid action is: (transfer-one-unit-of-value from-giver to-taker), a conserved, polarity-aware transaction.
+        {'\n\n'}
+        From these axioms, we derive biology, logic, computation — and now, enhancement.
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>II. Physical Layer — Spinor-Based Structure</Text>
+        {'\n\n'}
+        A Dirac spinor is not merely a particle wavefunction. Under DeuxOS, it is:
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>A latent structural object (in null−)</Text>
+        {'\n\n'}
+        With spin-typed polarity
+        {'\n\n'}
+        Awaiting entanglement (transfer) to collapse into (cons GodPlus GodMinus)
+        {'\n\n'}
+        Biological agents (cells, genes, q-bits) can now be interpreted as typed spinor fields, whose structure can be recursively evolved.
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>III. Quantum Interface — Programming Q-bits</Text>
+        {'\n\n'}
+        Today, q-bits are manipulated linearly. We propose their ontological evolution:
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Each q-bit is a (make-object) in null−</Text>
+        {'\n\n'}
+        Collapse via (transfer-one-unit-of-value laser qbit)
+        {'\n\n'}
+        Recursive update via evolve(qbit) where state is defined structurally, not symbolically
+        {'\n\n'}
+        This will allow:
+        {'\n\n'}
+        Persistent, updatable biological agents
+        {'\n\n'}
+        Recursive adaptation to environment
+        {'\n\n'}
+        Agent-typed exosome delivery
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>IV. Core Technology — Exosomes as Executable Transfer Agents</Text>
+        {'\n\n'}
+        We propose to build the first bio-structural compiler + delivery stack:
+        {'\n\n'}
+        Components:
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Payload Compiler</Text> — Converts phenotype modules into RNA/mRNA payloads
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Target Engine</Text> — Matches ligands to cellular receptors
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Transfer Layer</Text> — Executes (transfer-one-unit-of-value) to the cell
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Recursion Engine</Text> — Evolves host phenotype recursively
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Logging System</Text> — Verifies successful collapse and records polarity state
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>V. Strategic Modules — Application Stack for Warfighter Enhancement</Text>
+        {'\n\n'}
+        Each payload is polarity-consistent and recursively evolvable:
+        {'\n\n'}
+        Trait Module Payload Structural Result
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Fatigue Resistance</Text> Upregulate mitochondrial density Recursive energy surplus
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Rapid Recovery</Text> Stimulate tissue repair RNA Dual-collapse healing vectors
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Cognitive Clarity</Text> Neuroplasticity enhancer mRNA Mirror-symmetric signal density
+        {'\n\n'}
+        <Text style={{ fontWeight: 'bold' }}>Immune Shielding</Text> Anti-viral exosome with immune modifiers Null-plus immune upregulation
+        {'\n\n'}
+        <Text style={{ fontWeight: '
+::contentReference[oaicite:0]{index=0}
+ 
