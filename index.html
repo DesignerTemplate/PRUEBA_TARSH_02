@@ -1,51 +1,11 @@
-import React, { useEffect } from 'react'
-import { App } from '../src/app'
-import { Playground } from '../src/playground'
+/** @jsxRuntime classic */
+/** @jsxFrag Fragment */
+import { View, Text } from 'utopia-api'
 
-export const MainPage: React.FC = () => {
-  // Dynamically inject the Merriweather font
-  useEffect(() => {
-    const link = document.createElement('link')
-    link.href = 'https://fonts.googleapis.com/css2?family=Merriweather&display=swap'
-    link.rel = 'stylesheet'
-    document.head.appendChild(link)
-  }, [])
-
-  const containerStyle: React.CSSProperties = {
-    fontFamily: 'Merriweather, serif',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'flex-start',
-    padding: '40px',
-    backgroundColor: '#f5f5f5',
-    minHeight: '100vh',
-  }
-
-  const boxStyle: React.CSSProperties = {
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    borderRadius: '8px',
-    backgroundColor: '#ffffff',
-    padding: '20px',
-    width: '45%',
-  }
-
-  const headingStyle: React.CSSProperties = {
-    fontSize: '20px',
-    marginBottom: '16px',
-    fontWeight: 700,
-  }
-
+export const Playground = () => {
   return (
-    <div style={containerStyle}>
-      <div style={boxStyle}>
-        <h2 style={headingStyle}>Playground</h2>
-        <Playground />
-      </div>
-      <div style={boxStyle}>
-        <h2 style={headingStyle}>My App</h2>
-        <App />
-      </div>
-    </div>
+    <View style={{ padding: 20 }}>
+      <Text>Hello, Playground! 🚀</Text>
+    </View>
   )
 }
