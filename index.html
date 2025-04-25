@@ -1,27 +1,45 @@
-import { View, Text } from 'utopia-api';
+import { View, Text, TouchableOpacity } from 'utopia-api';
 
-export const HelloTestPage = () => (
+export const NavigationPage = () => (
   <View
     style={{
       flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#f0f0f0',
-      padding: 20,
+      paddingTop: 40, // Adjust this value to control the space from the top
+      backgroundColor: '#f4f4f4',
     }}
   >
-    <Text
+    <View
       style={{
-        fontSize: 120,
-        fontWeight: 'bold',
-        fontFamily: 'Arial, sans-serif',
-        color: '#333',
-        textAlign: 'center',
-        textTransform: 'uppercase',
-        letterSpacing: 5,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        padding: 10,
+        backgroundColor: '#fff',
+        borderBottomWidth: 1,
+        borderBottomColor: '#ddd',
       }}
     >
-      HELLO TEST PAGE
-    </Text>
+      <TouchableOpacity>
+        <Text style={{ fontSize: 18, color: '#007bff' }}>Home</Text>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Text style={{ fontSize: 18, color: '#007bff' }}>Info</Text>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Text style={{ fontSize: 18, color: '#007bff' }}>Services</Text>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Text style={{ fontSize: 18, color: '#007bff' }}>Contact</Text>
+      </TouchableOpacity>
+    </View>
+
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Text style={{ fontSize: 24, fontWeight: 'bold' }}>Welcome to the Navigation Page</Text>
+    </View>
   </View>
 );
