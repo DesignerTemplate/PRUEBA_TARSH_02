@@ -1,42 +1,16 @@
-import * as React from 'react'
-import { Scene, Storyboard } from 'utopia-api'
-import { App } from '../src/app'
-import { Playground } from '../src/playground'
+import { View, Text } from 'utopia-api';
 
-export var storyboard = (
-  <Storyboard>
-    <Scene
-      id='main-page-scene'
-      style={{
-        width: 1600,
-        height: 1000,
-        position: 'absolute',
-        left: 100,
-        top: 103,
-        backgroundColor: '#f5f5f5',
-        fontFamily: 'Merriweather, serif',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'flex-start',
-        padding: 40,
-      }}
-      commentId='b5a31684b22336887e56dd4db0ea1734'
-    >
-      <div
-        style={{
-          width: '45%',
-          backgroundColor: 'white',
-          padding: 20,
-          borderRadius: 8,
-          boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-        }}
-      >
-        <h2 style={{ fontSize: 20, fontWeight: 700 }}>
-          Playground
-        </h2>
-        <Playground />
-      </div>
-    </Scene>
-  </Storyboard>
-)
+export const CenteredTextPage = () => (
+  <View
+    style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#f4f4f4',
+    }}
+  >
+    <Text style={{ fontSize: 24, fontFamily: 'Times New Roman' }}>
+      TEST HELLO PAGE
+    </Text>
+  </View>
+);
