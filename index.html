@@ -1,45 +1,68 @@
-import { View, Text, TouchableOpacity } from 'utopia-api';
+import React from 'react';
 
-export const NavigationPage = () => (
-  <View
-    style={{
-      flex: 1,
-      paddingTop: 40, // Adjust this value to control the space from the top
+const UtopiaMenu: React.FC = () => {
+  const styles = {
+    body: {
+      fontFamily: 'Arial, sans-serif',
       backgroundColor: '#f4f4f4',
-    }}
-  >
-    <View
-      style={{
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        padding: 10,
-        backgroundColor: '#fff',
-        borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
-      }}
-    >
-      <TouchableOpacity>
-        <Text style={{ fontSize: 18, color: '#007bff' }}>Home</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={{ fontSize: 18, color: '#007bff' }}>Info</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={{ fontSize: 18, color: '#007bff' }}>Services</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={{ fontSize: 18, color: '#007bff' }}>Contact</Text>
-      </TouchableOpacity>
-    </View>
+      color: '#333',
+      lineHeight: 1.6,
+      margin: 0,
+      padding: 0,
+    } as React.CSSProperties,
 
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Text style={{ fontSize: 24, fontWeight: 'bold' }}>Welcome to the Navigation Page</Text>
-    </View>
-  </View>
-);
+    navbar: {
+      backgroundColor: '#333',
+      overflow: 'hidden',
+      marginTop: '30px',
+      textAlign: 'center',
+    } as React.CSSProperties,
+
+    navLink: {
+      display: 'inline-block',
+      color: '#f2f2f2',
+      padding: '14px 20px',
+      textDecoration: 'none',
+      fontSize: '17px',
+    } as React.CSSProperties,
+
+    navLinkHover: {
+      backgroundColor: '#ddd',
+      color: 'black',
+    } as React.CSSProperties,
+
+    content: {
+      padding: '20px',
+      textAlign: 'center',
+    } as React.CSSProperties,
+
+    heading: {
+      fontSize: '2.5em',
+      marginBottom: '10px',
+    } as React.CSSProperties,
+
+    paragraph: {
+      fontSize: '1.2em',
+      color: '#555',
+    } as React.CSSProperties,
+  };
+
+  return (
+    <div style={styles.body}>
+      <nav style={styles.navbar}>
+        <a href="#home" style={styles.navLink}>Home</a>
+        <a href="#info" style={styles.navLink}>Info</a>
+        <a href="#features" style={styles.navLink}>Features</a>
+        <a href="#contact" style={styles.navLink}>Contact</a>
+      </nav>
+      <div style={styles.content}>
+        <h1 style={styles.heading}>Welcome to Utopia App</h1>
+        <p style={styles.paragraph}>
+          Your journey to a better digital experience starts here.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default UtopiaMenu;
